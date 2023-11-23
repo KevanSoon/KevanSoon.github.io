@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="index.css">
-<title>Kevan Soon's Portfolio</title>
-
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=10">
+    <title>Kevan Soon's Portfolio</title>
 </head>
 <body>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/kevansoon/">About</a></li>
-        <li><a href="https://www.linkedin.com/in/kevansoon/">Achievements</a></li>
-        <li><a href="https://www.linkedin.com/in/kevansoon/">Goals</a></li>
-      </ul>
 <div id="header">
-    <div class="row">
-        <div class="col-8">
-            <div class="intro_container">
-                  <div class="intro_header">I am</div>
-                  <div class="intro_header2">Kevan Soon</div>
-                  <div class="intro_header">Aspiring Software Engineer</div>
-            </div>
+    <div class="container">
+        <nav>
+            <img src="portfolio.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Undergraduate in Software Engineering</p>
+            <h1>Hi, I'm <span>Kevan Soon</span> <br> From Singapore</h1>
         </div>
-    <div class="col-4"><img src="intro_img.png"></div> 
     </div>
 </div>
 
+<!-- About -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="intro_img.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    The lorem ipsum is a placeholder text used in publishing and graphic design. 
+                    This filler text is a short paragraph that 
+                    contains all the letters of the alphabet.
+                     The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>Developing Web App Features using Django</li>
+                        <li><span>C#</span><br>Developing Web App Features using MVC</li>
+                        <li><span>Java</span><br>Object Oriented Programming</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - 2021</span><br>Internship at XIOHOO.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Incoming SMU Software Engineering Student</li>
+                        <li><span>2019 - 2022</span><br>Building Android Apps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove('active-link');
+        }
+        for (tablink of tabcontents) {
+            tablink.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 
 </body>
 </html>
