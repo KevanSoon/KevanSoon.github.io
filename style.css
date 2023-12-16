@@ -1,3 +1,12 @@
+/* color used for styling 
+#080808 black
+#8685EF light purple
+#FAF8FF white
+
+extra color: 
+#201E2C dark blue / black 
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -5,19 +14,28 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
-    color: #fff;
+    color: #FAF8FF;
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(intro_img.png);
-    background-position: right;
-    background-size: 400px;
+    background-image: url(about_img.png);
+    /* background-size: cover; */
     background-repeat: no-repeat;
+    background-position: 820px;
+    background-size: 590px 600px;
+    
+
+    
 }
+
 
 .container {
     padding: 10px 10%;
@@ -41,7 +59,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #FAF8FF;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -52,7 +70,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: darkblue;
+    background: #8685EF; 
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -74,7 +92,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: darkblue;
+    color: #8685EF;
 }
 
 /* About Section */
@@ -109,7 +127,7 @@ nav ul li a:hover::after {
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #FAF8FF;
 }
 
 .tab-titles {
@@ -130,7 +148,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: darkblue;
+    background: #8685EF;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -149,7 +167,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: blueviolet;
+    color: #8685EF; 
     font-size: 14px;
 }
 
@@ -180,7 +198,7 @@ nav ul li a:hover::after {
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, trnsform 0.5s;
+    transition: background 0.5s, transform 0.5s;
 
 }
 
@@ -197,14 +215,14 @@ nav ul li a:hover::after {
 
 .services-list div a {
     text-decoration: none;
-    color: #fff;
+    color: #FAF8FF;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 
 .services-list div:hover {
-    background: #ff004f;
+    background: #8685EF;
     transform: translateY(-10px);
 
 }
@@ -241,7 +259,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #8685EF );
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -265,11 +283,11 @@ nav ul li a:hover::after {
 
 .layer a {
     margin-top: 20px;
-    color: #ff004f;
+    color: #8685EF; 
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: #FAF8FF;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -288,17 +306,17 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #8685EF;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #FAF8FF;
     transition: background 0.5s;
 
 }
 
 .btn:hover {
-    background-color: #ff004f;
+    background-color: #8685EF;
 }
 
 
@@ -313,7 +331,10 @@ nav .fas {
 @media only screen and (max-width: 600px) {
 
     #header {
-        background-image: url(intro_img_phoned.png);
+        background-image: url(about_img.png);
+        background-position: center;
+        background-size: 250px 250px;
+        height: 425px;
     }
 
     .header-text {
@@ -331,7 +352,7 @@ nav .fas {
     }
 
     nav ul {
-        background: #ff004f;
+        background: #8685EF;
         position: fixed;
         top: 0;
         right: -200px;
