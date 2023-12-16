@@ -181,7 +181,7 @@ nav ul li a:hover::after {
 
 /* ---services------- */
 
-#services {
+/* #services {
     padding: 30px 0;
 }
 
@@ -225,11 +225,75 @@ nav ul li a:hover::after {
     background: #8685EF;
     transform: translateY(-10px);
 
+} */
+/*---projects---*/
+
+
+#projects {
+    padding: 30px 0;
 }
 
-/* ----- portfolio------ */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
 
-#portfolio {
+}
+
+.projects-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: center;
+}
+
+.projects-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.projects-list div img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.projects-list div p {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+.projects-list div a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #8685EF; 
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 60px;
+    background: #FAF8FF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+
+}
+
+.projects-list div:hover {
+    background: #8685EF;
+    transform: translateY(-10px);
+
+}
+
+
+/* ----- achievements------ */
+
+#achievements {
     padding: 50px 0;
     
 }
