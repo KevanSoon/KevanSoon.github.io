@@ -1,231 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Kevan Soon's Portfolio</title>
-    <script src="https://kit.fontawesome.com/8ac8a5c525.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <!-- <li><a href="#">Contact</a></li> -->
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Undergraduate in Software Engineering</p>
-            <h1>Hi, I'm <span>Kevan Soon</span> <br>From Singapore</h1>
-        </div>
-    </div>
-</div>
+    <header class="header">
+        <a href="#" class="logo">KevanSoon</a>
 
-<!-- About -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="intro_img.png">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>
-                    I am a student who has just graduated from Republic Polytechnic with a Diploma in Business Information Systems. 
-                    I am currently serving my two years of National Service before my further studies at 
-                    Singapore Management University for a Undergraduate Degree in Software Engineering.  
-                </p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Python</span><br>Developing Web Application Features using Django</li>
-                        <li><span>C#</span><br>Developing Web Application Features using ASP.NET CORE</li>
-                        <li><span>Java</span><br>Object Oriented Programming</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2021 - 2021</span><br>Internship at XIOHOO.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2024</span><br>Incoming SMU Software Engineering Student</li>
-                        <li><span>2019 - 2022</span><br>Republic Polytechnic Business Information Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-<!--------servicess------------ -->
-<!-- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>Backend Programming</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>Web App Progamming</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--projects-->
-<div id="projects">
-    <div class="container">
-        <div class="sub-title">
-            My Projects 
-        </div>
-        <div class="projects-list">
-            <div>
-                <h2>Room Furniture Budget Calculator</h2>
-                <img src="room_funiture.png">
-                <p>  This is a hackathon project I have created for the AISG
-                    Hackathon 2021. It uses python libraries PeekingDuck and TagUI
-                    RPA to help automate budget calculation for room furnitures
-                    based on themes.
-                </p>
-                <a href="https://github.com/KevanSoon/AISG-Hackathon-Room-Funiture-Budget-Calculator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <h2>Carapace AI</h2>
-                <img src="carapace_ai.png">
-                <p> This is a project my friends and I have created by labeling
-                    and training datasets we have took from Kaggle to a model
-                    using Yolov5 to help in detecting whether healthcare workers
-                    have worn their personal protective equipment properly.
-                </p>
-                <a href="https://github.com/syalabil/CarapaceAI"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <h2>Carefall Vision</h2>
-                <img src="carefall_vision.png">
-                <p>This is a hackathon project my friends and I have created for
-                    the Google for Startups Hackathon Singapore 2022. It mainly
-                    uses mediapipe for pose classification, and Google Cloud
-                    AutoML to help in predicting whether someone has fell down to
-                    determine the severity of the fall and whether it requires
-                    medical attention.
-                </p>
-                <a href="https://github.com/syalabil/becarefall"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- -----------achievements---------->
-<div id="achievements">
-    <div class="container">
-        <h1 class="sub-title">My Achievements</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="aisg_hacakthon.png">
-                <div class="layer">
-                    <h3>AISG Hackathon 2021</h3>
-                    <p>
-                        The Room Furniture Budget Calculator is a project I have developed
-                        for the AISG Hackathon 2021 to help DIY homeowners get a budget estimate of the themes
-                        they are using to design their rooms. 
-         
-                    </p>
-                    <!-- <a href="https://github.com/KevanSoon/AISG-Hackathon-Room-Funiture-Budget-Calculator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img src="google_hackathon.png">
-                <div class="layer">
-                    <h3>Google For Startups Hackathon Singapore</h3>
-                    <p>My team and I pitched an idea of using computer vision
-                        to help detect severity of falls for elderly people living alone
-                        at home to decide the next course of action (Call an Ambulance / Inform their Next of Kin). 
-                    </p>
-                    <!-- <a href="https://github.com/syalabil/becarefall"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img src="ada_hackathon.png">
-                <div class="layer">
-                    <h3>ADA Hackathon</h3>
-                    <p>My team and I pitched an idea of using computer vision with an AI trained model  
-                        to help detect skin diseases and provide reccomendation
-                         such as using skin treatment creams or seeking professional medical advice. 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- <a href="#" class="btn">See more</a> -->
-    </div>
-</div>
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a> 
+            <a href="#portfolio">Projects</a>
     
-    function opentab(tabname) {
-        for(tablink of tablinks) {
-            tablink.classList.remove('active-link');
-        }
-        for (tablink of tabcontents) {
-            tablink.classList.remove('active-tab');
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
-    }
-</script>
+          
+        </nav>
+    </header> 
+    <section class="tree">
+        <h1 class="tree-text">
+            Hi, I'm Kevan Soon <br>
+            <span class="multiple-text"></span>
+        </h1>
+    </section>
 
-<script>
-    var sidemeu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemeu.style.right = "0";
-        // console.log("Clicked")
-    }
-    function closemenu() {
-        sidemeu.style.right = "-200px";
-    }
-</script>
 
+    <section class="home" id="about">
+        <div class="home-content">
+            <h3>About me</h3>
+            <p>
+                I am a Software Engineering Freshmen who is interested in learning about the latest programming languages and frameworks to code useful projects that can help others.
+            </p>
+        </div>
+        <div class="home-img">
+            <img src="images/home_img.png" alt="">
+        </div>
+    </section>
+
+
+
+    <section class="portfolio" id="portfolio">
+    
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/carapace_ai.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Carapace Ai</h4>
+                    <p>Collaborated in a team to develop an Personal Protective Equipment (PPE) detection system leveraging the Yolov5 object detection model</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/room_funiture.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Room Funiture Budget Calculator</h4>
+                    <p>Developed an automation solution using TagUI RPA and PeekingDuck to streamline the process of calculating and tracking the cost of furniture for room setups</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/carefall_vision.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Collaborated in a team to develop a fall detection system for the Google for Startups Hackathon Singapore 2022. The solution utilized Mediapipe for advanced pose classification and Google Cloud AutoML to predict the severity of falls</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/panda.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem Ipsum has been the industry's standard dummy</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/panda.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem Ipsum has been the industry's standard dummy</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/panda.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem Ipsum has been the industry's standard dummy</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Kevan Soon | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
