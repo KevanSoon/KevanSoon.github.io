@@ -1,231 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Kevan Soon's Portfolio</title>
-    <script src="https://kit.fontawesome.com/8ac8a5c525.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio Website</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <!-- <li><a href="#">Contact</a></li> -->
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Undergraduate in Software Engineering</p>
-            <h1>Hi, I'm <span>Kevan Soon</span> <br>From Singapore</h1>
-        </div>
-    </div>
-</div>
+  <header>
+      <img src="images/about_img.png" alt="My Profile Image">
+      <h1>I'm Kevan Soon</h1>
+      <span class="multiple-text"></span>
+  </header>
 
-<!-- About -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="intro_img.png">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>
-                    I am a student who has just graduated from Republic Polytechnic with a Diploma in Business Information Systems. 
-                    I am currently serving my two years of National Service before my further studies at 
-                    Singapore Management University for a Undergraduate Degree in Software Engineering.  
-                </p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Python</span><br>Developing Web Application Features using Django</li>
-                        <li><span>C#</span><br>Developing Web Application Features using ASP.NET CORE</li>
-                        <li><span>Java</span><br>Object Oriented Programming</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2021 - 2021</span><br>Internship at XIOHOO.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2024</span><br>Incoming SMU Software Engineering Student</li>
-                        <li><span>2019 - 2022</span><br>Republic Polytechnic Business Information Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--------servicess------------ -->
-<!-- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>Backend Programming</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>Web App Progamming</h2>
-                <p>The lorem ipsum is a 
-                    placeholder text used in 
-                    publishing and graphic design. T
-                    his filler text is a short paragraph that contains all the letters of the alphabet. 
-                    The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--projects-->
-<div id="projects">
-    <div class="container">
-        <div class="sub-title">
-            My Projects 
-        </div>
-        <div class="projects-list">
-            <div>
-                <h2>Room Furniture Budget Calculator</h2>
-                <img src="room_funiture.png">
-                <p>  This is a hackathon project I have created for the AISG
-                    Hackathon 2021. It uses python libraries PeekingDuck and TagUI
-                    RPA to help automate budget calculation for room furnitures
-                    based on themes.
-                </p>
-                <a href="https://github.com/KevanSoon/AISG-Hackathon-Room-Funiture-Budget-Calculator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <h2>Carapace AI</h2>
-                <img src="carapace_ai.png">
-                <p> This is a project my friends and I have created by labeling
-                    and training datasets we have took from Kaggle to a model
-                    using Yolov5 to help in detecting whether healthcare workers
-                    have worn their personal protective equipment properly.
-                </p>
-                <a href="https://github.com/syalabil/CarapaceAI"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <h2>Carefall Vision</h2>
-                <img src="carefall_vision.png">
-                <p>This is a hackathon project my friends and I have created for
-                    the Google for Startups Hackathon Singapore 2022. It mainly
-                    uses mediapipe for pose classification, and Google Cloud
-                    AutoML to help in predicting whether someone has fell down to
-                    determine the severity of the fall and whether it requires
-                    medical attention.
-                </p>
-                <a href="https://github.com/syalabil/becarefall"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- -----------achievements---------->
-<div id="achievements">
-    <div class="container">
-        <h1 class="sub-title">My Achievements</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="aisg_hacakthon.png">
-                <div class="layer">
-                    <h3>AISG Hackathon 2021</h3>
-                    <p>
-                        The Room Furniture Budget Calculator is a project I have developed
-                        for the AISG Hackathon 2021 to help DIY homeowners get a budget estimate of the themes
-                        they are using to design their rooms. 
-         
-                    </p>
-                    <!-- <a href="https://github.com/KevanSoon/AISG-Hackathon-Room-Funiture-Budget-Calculator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img src="google_hackathon.png">
-                <div class="layer">
-                    <h3>Google For Startups Hackathon Singapore</h3>
-                    <p>My team and I pitched an idea of using computer vision
-                        to help detect severity of falls for elderly people living alone
-                        at home to decide the next course of action (Call an Ambulance / Inform their Next of Kin). 
-                    </p>
-                    <!-- <a href="https://github.com/syalabil/becarefall"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img src="ada_hackathon.png">
-                <div class="layer">
-                    <h3>ADA Hackathon</h3>
-                    <p>My team and I pitched an idea of using computer vision with an AI trained model  
-                        to help detect skin diseases and provide reccomendation
-                         such as using skin treatment creams or seeking professional medical advice. 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- <a href="#" class="btn">See more</a> -->
-    </div>
-</div>
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently a Year 1 Software Engineering Freshmen at Singapore Management University. 
+      I am look forward in learning about the latest programming languages and frameworks to code useful projects that can help others.</p>
     
-    function opentab(tabname) {
-        for(tablink of tablinks) {
-            tablink.classList.remove('active-link');
-        }
-        for (tablink of tabcontents) {
-            tablink.classList.remove('active-tab');
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
-    }
-</script>
+    <div class="experience">
+      <h3>Experience</h3>
+      <div class="experience-item">
+        <img class="icon" src="images/xiohoo.jpg" alt="Company Logo">
+        <div class="experience-details">
+          <h4>Application Programmer</h4>
+          <p>Internship at XIOHOO (March 2021 - August 2021)</p>
+        </div>
+      </div>
+      <!-- Add more experience items as needed -->
+    </div>
+  
+    <div class="education">
+      <h3>Education</h3>
+      <div class="education-item">
+        <img class="icon" src="images/smu.png" alt="School Logo">
+        <div class="education-details">
+          <h4>Bachelor of Science in Software Engineering</h4>
+          <p>Currently Year 1 Semester 2 Student at SMU</p>
+        </div>
+      </div>
+      <!-- Add more education items as needed -->
+      <div class="education-item">
+        <img class="icon" src="images/rp.png" alt="School Logo">
+        <div class="education-details">
+          <h4>Diploma in Business Information Systems</h4>
+          <p>Graduated in 2022 from Republic Polytechnic</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="images/room_funiture.png" alt="Project 1 Image">
+        <h3>Room Furniture Budget Automation</h3>
+        <p>This project, developed for the AISG Student Hackathon 2021, leverages Python libraries PeekingDuck and TagUI RPA to automate the process of calculating budgets for room furniture based on specified themes. The system efficiently streamlines the budgeting process by extracting furniture options, calculating costs, and organizing the information to match desired room aesthetics. This solution highlights my expertise in integrating automation tools and developing streamlined workflows for complex tasks.</p>
+      </div>
+      <div class="project">
+        <img src="images/carapace_ai.png" alt="Project 2 Image">
+        <h3>Carapace AI</h3>
+        <p>In this project, my team and I labeled and trained datasets sourced from Kaggle to build a model using Yolov5 for detecting whether healthcare workers are wearing their personal protective equipment (PPE) properly. The system enables real-time monitoring to ensure compliance with safety protocols, enhancing workplace safety. This project showcases my ability to work with large datasets, apply machine learning techniques, and contribute to public health initiatives through AI-driven solutions.</p>
+      </div>
+      <!-- Add more projects as needed -->
+      <div class="project">
+        <img src="images/carefall_vision.png" alt="Project 2 Image">
+        <h3>Carefall Vision</h3>
+        <p>This project, developed by my team and I for the Google for Startups Hackathon Singapore 2022, utilizes Mediapipe for pose classification and Google Cloud AutoML to predict fall severity. The system analyzes fall incidents to determine their severity and assess whether immediate medical attention is necessary. This project demonstrates my expertise in computer vision, machine learning, and the application of AI to healthcare solutions.</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-    var sidemeu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemeu.style.right = "0";
-        // console.log("Clicked")
-    }
-    function closemenu() {
-        sidemeu.style.right = "-200px";
-    }
-</script>
-
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievements">
+      <div class="achievement">
+        <img src="images/aisg_hacakthon.png" alt="Achievement 1 Image">
+        <h3>AISG Hackathon Top 3 Winners</h3>
+        <!-- <p>Description of Achievement 2 goes here...</p> -->
+      </div>
+      <div class="achievement">
+        <img src="images/google_hackathon.png" alt="Achievement 2 Image">
+        <h3>Google for Startups Cloud Hackathon Singapore 2022 (Top 20 Selected Teams)</h3>
+        <!-- <p>Description of Achievement 2 goes here...</p> -->
+      </div>
+      <!-- Add more achievements as needed -->
+      <div class="achievement">
+        <img src="images/ada_hackathon.png" alt="Achievement 2 Image">
+        <h3> ADA Business Messaging Hackathon 2023 (Top 500 Ideas)</h3>
+        <!-- <p>Description of Achievement 2 goes here...</p> -->
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+      <p>&copy; 2025 Kevan Soon. All rights reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
 </body>
 </html>
