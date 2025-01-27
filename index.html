@@ -1,104 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio Website</title>
-  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevan's Portfolio Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #000;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .galaxy-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, #b3d9ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #cce6ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #e6f2ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #f0f8ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #b3d9ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #cce6ff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: zoom 10s infinite;
+            opacity: 0.5;
+        }
+
+        .nebula {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: fill;
+            border: 3px solid #fff;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 1rem 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #7ac7e3;
+            text-shadow: 0 0 10px #7ac7e3;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: #4a9bb3;
+            text-shadow: 0 0 10px #4a9bb3;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-top: 1.5rem;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project {
+            flex-basis: calc(50% - 1rem);
+            margin-bottom: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #4a9bb3;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .achievement {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #4a9bb3;
+        }
+
+        .achievement img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        #typed {
+            font-weight: bold;
+            color: #4a9bb3;
+            text-shadow: 0 0 10px #4a9bb3;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+            color: #4a9bb3;
+            text-shadow: 0 0 10px #4a9bb3;
+        }
+
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item h4, .experience-item h4 {
+            color: #7ac7e3;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item p, .experience-item p {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .projects, .achievements {
+                grid-template-columns: 1fr;
+            }
+
+            .project, .achievement {
+                flex-basis: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            nav ul li {
+                margin: 0 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-      <img src="images/about_img.png" alt="My Profile Image">
-      <h1>I'm Kevan Soon</h1>
-      <span class="multiple-text"></span>
-  </header>
+    <div class="galaxy-background"></div>
+    <div class="nebula"></div>
+    <header>
+        <div class="header-content">
+            <img src="/images/about_img.png" alt="Your Name" class="profile-image">
+            <h1>Kevan Soon<h1>
+            <p>I'm a <span id="typed"></span></p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am currently a Year 1 Software Engineering Freshmen at Singapore Management University. 
-      I look forward to learning about the latest programming languages and frameworks to code useful projects that can help others.</p>
-    
-    <div class="experience">
-      <h3>Experience</h3>
-      <div class="experience-item">
-        <img class="icon" src="images/xiohoo.jpg" alt="Company Logo">
-        <div class="experience-details">
-          <h4>Application Programmer</h4>
-          <p>Internship at XIOHOO (March 2021 - August 2021)</p>
-        </div>
-      </div>
-      <!-- Add more experience items as needed -->
-    </div>
-  
-    <div class="education">
-      <h3>Education</h3>
-      <div class="education-item">
-        <img class="icon" src="images/smu.png" alt="School Logo">
-        <div class="education-details">
-          <h4>Bachelor of Science in Software Engineering</h4>
-          <p>Currently a Year 1 Semester 2 Student at SMU</p>
-        </div>
-      </div>
-      <!-- Add more education items as needed -->
-      <div class="education-item">
-        <img class="icon" src="images/rp.png" alt="School Logo">
-        <div class="education-details">
-          <h4>Diploma in Business Information Systems</h4>
-          <p>Graduated in 2022 from Republic Polytechnic</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="images/room_funiture.png" alt="Project 1 Image">
-        <h3>Room Furniture Budget Automation</h3>
-        <p>This project, developed for the AISG Student Hackathon 2021, leverages Python libraries PeekingDuck and TagUI RPA to automate the process of calculating budgets for room furniture based on specified themes. The system efficiently streamlines the budgeting process by extracting furniture options, calculating costs, and organizing the information to match desired room aesthetics. This solution highlights my expertise in integrating automation tools and developing streamlined workflows for complex tasks.</p>
-      </div>
-      <div class="project">
-        <img src="images/carapace_ai.png" alt="Project 2 Image">
-        <h3>Carapace AI</h3>
-        <p>In this project, my team and I labeled and trained datasets sourced from Kaggle to build a model using Yolov5 for detecting whether healthcare workers are wearing their personal protective equipment (PPE) properly. The system enables real-time monitoring to ensure compliance with safety protocols, enhancing workplace safety. This project showcases my ability to work with large datasets, apply machine learning techniques, and contribute to public health initiatives through AI-driven solutions.</p>
-      </div>
-      <!-- Add more projects as needed -->
-      <div class="project">
-        <img src="images/carefall_vision.png" alt="Project 2 Image">
-        <h3>Carefall Vision</h3>
-        <p>This project, developed by my team and I for the Google for Startups Hackathon Singapore 2022, utilizes Mediapipe for pose classification and Google Cloud AutoML to predict fall severity. The system analyzes fall incidents to determine their severity and assess whether immediate medical attention is necessary. This project demonstrates my expertise in computer vision, machine learning, and the application of AI to healthcare solutions.</p>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am currently a Year 1 Software Engineering Freshmen at Singapore Management University. I look forward to learning about the latest programming languages and frameworks to code useful projects that can help others.</p>
+            
+            <h3>Education</h3>
+            <div class="education-item">
+                <h4>Bachelor of Science in Sofware Engineering</h4>
+                <p>Singapore Management University</p>
+                <p>Year 1 Semester 2</p>
+            </div>
+            <div class="education-item">
+                <h4>Diploma in Business Information Systems</h4>
+                <p>Republic Polytechnic</p>
+                <p>Graduated in 2022</p>
+            </div>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <div class="achievements">
-      <div class="achievement">
-        <img src="images/aisg_hacakthon.png" alt="Achievement 1 Image">
-        <h3>AISG Hackathon Top 3 Winners</h3>
-        <!-- <p>Description of Achievement 2 goes here...</p> -->
-      </div>
-      <div class="achievement">
-        <img src="images/google_hackathon.png" alt="Achievement 2 Image">
-        <h3>Google for Startups Cloud Hackathon Singapore 2022 (Top 20 Selected Teams)</h3>
-        <!-- <p>Description of Achievement 2 goes here...</p> -->
-      </div>
-      <!-- Add more achievements as needed -->
-      <div class="achievement">
-        <img src="images/ada_hackathon.png" alt="Achievement 2 Image">
-        <h3> ADA Business Messaging Hackathon 2023 (Top 500 Ideas)</h3>
-        <!-- <p>Description of Achievement 2 goes here...</p> -->
-      </div>
-    </div>
-  </section>
- 
-  <footer>
-      <p>&copy; 2025 Kevan Soon. All rights reserved.</p>
-  </footer>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="main.js"></script>
+            <h3>Experience</h3>
+            <div class="experience-item">
+                <h4>Application Programmer</h4>
+                <p>XIOHOO</p>
+                <p>Mar 2021 - Aug 2021</p>
+                <ul>
+                    <li>Developed a Social Newsfeed and FAQ page with Django framework for school’s Final Year Project </li>
+                    <li>Attempted to build a chatbot to deploy on Telegram and Demo Chatbot App</li>
+                    <li>Helped out in physical classes (Mainly course attendance taking and answering questions from students)</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="/images//helpLah.ai.png" alt="Project 1">
+                    <h3>HelpLah.AI</h3>
+                    <p>
+                        HelpLah.AI is a multilingual AI chatbot developed during Hack n Roll 2025 to address social isolation and loneliness among Singaporeans, particularly youth. Built with Flask and powered by the robust Llama-2-7B-chat-GGML model, it communicates effectively in both English and Mandarin. The chatbot uses the gtts library for natural-sounding voice responses, fostering empathetic and engaging interactions.
+                        
+                        To ensure efficient performance, the system connects the Flask application to Google Colab’s corporate GPUs via ngrok, enabling fast response times without relying on local hardware. HelpLah.AI provides accessible mental health support, showcasing the potential of technology in promoting well-being and community connection.</p>
+                </div>
+                <div class="project">
+                    <img src="/images/greenmerlion.ai.png" alt="Project 2">
+                    <h3>GreenMerlion.AI</h3>
+                    <p>This project addresses low recycling rates by combining image processing, AI, and gamification to promote better recycling practices.
+
+                        The Waste Classification System analyzes photos of waste to classify items as recyclable or non-recyclable, reducing contamination in recycling bins and improving recycling efficiency. An AI-Powered Assistant provides users with guidance on proper waste disposal and answers questions about recyclable materials, making it easier to recycle correctly. To encourage active participation, a Gamification System rewards users for correct recycling practices, fostering long-term behavioral change and building a community focused on responsible waste management.</p>
+                </div>
+                <div class="project">
+                    <img src="/images//carapace_ai.png" alt="Project 3">
+                    <h3>Carapace AI</h3>
+                    <p>In this project, my team and I labeled and trained datasets sourced from Kaggle to build a model using Yolov5 for detecting whether healthcare workers are wearing their personal protective equipment (PPE) properly. The system enables real-time monitoring to ensure compliance with safety protocols, enhancing workplace safety. This project showcases my ability to work with large datasets, apply machine learning techniques, and contribute to public health initiatives through AI-driven solutions.</p>
+                </div>
+                <div class="project">
+                    <img src="/images/room_funiture.png" alt="Project 4">
+                    <h3>Room Furniture Budget Automation</h3>
+                    <p>This project, developed for the AISG Student Hackathon 2021, leverages Python libraries PeekingDuck and TagUI RPA to automate the process of calculating budgets for room furniture based on specified themes. The system efficiently streamlines the budgeting process by extracting furniture options, calculating costs, and organizing the information to match desired room aesthetics. This solution highlights my expertise in integrating automation tools and developing streamlined workflows for complex tasks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <img src="/images/finalist_HFC.png" alt="Achievement 1">
+                    <h3>Top 10 Finalist SMU Hack for Cities 2025 (OneRP)</h3>
+                    <p></p>
+                </div>
+                <div class="achievement">
+                    <img src="/images/google_hackathon.png" alt="Achievement 2">
+                    <h3>(Top 20 Selected Teams for Idea Pitching) Google for Startups Cloud Hackathon Singapore 2022</h3>
+                    <p></p>
+                </div>
+                <div class="achievement">
+                    <img src="/images/aisg_hacakthon.png" alt="Achievement 3">
+                    <h3>AISG Hackathon Top 3 Winners</h3>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kevan Soon. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
