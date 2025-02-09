@@ -75,8 +75,8 @@
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: fill;
             border: 3px solid #fff;
@@ -236,6 +236,14 @@
             margin-bottom: 0.25rem;
         }
 
+        .education-item img, .experience-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             body {
@@ -314,11 +322,13 @@
             
             <h3>Education</h3>
             <div class="education-item">
-                <h4>Bachelor of Science in Sofware Engineering</h4>
+                <img src="/images/smu.png" alt="SMU Logo">
+                <h4>Bachelor of Science in Software Engineering</h4>
                 <p>Singapore Management University</p>
                 <p>Year 1 Semester 2</p>
             </div>
             <div class="education-item">
+                <img src="/images/rp.png" alt="RP Logo">
                 <h4>Diploma in Business Information Systems</h4>
                 <p>Republic Polytechnic</p>
                 <p>Graduated in 2022</p>
@@ -326,6 +336,7 @@
 
             <h3>Experience</h3>
             <div class="experience-item">
+                <img src="/images/xiohoo.jpg" alt="Xiohoo">
                 <h4>Application Programmer</h4>
                 <p>XIOHOO</p>
                 <p>Mar 2021 - Aug 2021</p>
@@ -348,6 +359,7 @@
                         HelpLah.AI is a multilingual AI chatbot developed during Hack n Roll 2025 to address social isolation and loneliness among Singaporeans, particularly youth. Built with Flask and powered by the robust Llama-2-7B-chat-GGML model, it communicates effectively in both English and Mandarin. The chatbot uses the gtts library for natural-sounding voice responses, fostering empathetic and engaging interactions.
                         
                         To ensure efficient performance, the system connects the Flask application to Google Colab’s corporate GPUs via ngrok, enabling fast response times without relying on local hardware. HelpLah.AI provides accessible mental health support, showcasing the potential of technology in promoting well-being and community connection.</p>
+                
                 </div>
                 <div class="project">
                     <img src="/images/greenmerlion.ai.png" alt="Project 2">
