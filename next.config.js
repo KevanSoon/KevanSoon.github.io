@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // enables static HTML export (next export)
+  output: 'export', // enables static HTML export
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -16,4 +16,4 @@ const nextConfig = {
   assetPrefix: isProd ? '/kevansoon.github.io/' : '',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
