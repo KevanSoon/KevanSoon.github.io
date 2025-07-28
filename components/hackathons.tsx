@@ -68,11 +68,11 @@ export default function Hackathons() {
 
   const hackathons = [
     {
-      title: "Community Hackathon 2025 (In Progress!)",
-      event: "Open Government Products",
+      title: "Community Hackathon 2025",
+      event: "Open Government Products & People's Association",
       description:
         "In Progress!",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/comm_hack.jpg",
       date: "June 2025",
       location: "Singapore",
       teamSize: "5 members",

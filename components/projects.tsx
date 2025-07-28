@@ -67,11 +67,11 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "EthosLens",
+      title: "Churp",
       description:
-        "EthosLens is an automated research engine that brings transparency to sustainability. It automates the process of acquiring, analyzing, and presenting ethical performance data of brands, helping consumers make informed decisions. Our platform leverages advanced web search, data processing, and AI-powered analysis to score companies across five ethical pillars: labor, environment, supply chain, governance, and animal welfare.",
-      image: "/Lifehack3.png",
-      technologies: ["FastAPI", "Uvicorn", "LangChain", "OpenAI", "Unstructured","ChromaDB","Google Custom Search API"],
+        "Churp is a unified feedback platform that empowers gardeners to submit concerns, track progress, and engage with outcomes, while enabling community managers to monitor issues, respond publicly, and build community trust, creating a transparent feedback loop with shared accountability.",
+      image: "/churp.jpg",
+      technologies: ["Vercel", "Next.js", "Supabase", "Twilio"],
       liveUrl: "https://youtu.be/c3tNx4gLfJg",
       githubUrl: "#",
       date: "2025",
