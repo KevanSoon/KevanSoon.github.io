@@ -183,7 +183,7 @@
         /* Header */
         .header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 100px 20px;
             position: relative;
             z-index: 10;
             /* Added parallax effect */
@@ -765,155 +765,190 @@
             box-shadow: 0 15px 40px rgba(77, 0, 128, 0.3);
         }
 
-        /* YouTube Section Styles */
-        .youtube-section {
-            padding: 50px 20px;
-            position: relative;
-            z-index: 10;
-        }
+     /* YouTube Section Styles */
+.youtube-section {
+  padding: 50px 20px;
+  position: relative;
+  z-index: 10;
+}
 
-        .youtube-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-shadow: 0 0 10px rgba(77, 0, 128, 0.6);
-            /* Added interactive heading */
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+.youtube-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(77, 0, 128, 0.6);
+  /* Added interactive heading */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-        .youtube-section h2:hover {
-            transform: scale(1.05);
-            text-shadow: 0 0 20px rgba(77, 0, 128, 0.8);
-        }
+.youtube-section h2:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(77, 0, 128, 0.8);
+}
 
-        .youtube-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.youtube-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        .youtube-player {
-            margin-bottom: 40px;
-            /* Added interactive video container */
-            transition: all 0.3s ease;
-        }
+.youtube-player {
+  margin-bottom: 40px;
+  /* Added responsive iframe container */
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  transition: all 0.3s ease;
+}
 
-        .youtube-player:hover {
-            transform: scale(1.02);
-        }
+.youtube-player:hover {
+  transform: scale(1.02);
+}
 
-        .youtube-player iframe {
-            /* Added interactive iframe */
-            transition: all 0.3s ease;
-        }
+.youtube-player iframe {
+  /* Made iframe fully responsive and positioned absolutely */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
-        .youtube-player iframe:hover {
-            box-shadow: 0 10px 30px rgba(77, 0, 128, 0.4);
-        }
+.youtube-player iframe:hover {
+  box-shadow: 0 10px 30px rgba(77, 0, 128, 0.4);
+}
 
-        .video-placeholder {
-            width: 100%;
-            height: 400px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed rgba(255, 0, 0, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+.video-placeholder {
+  width: 100%;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        .video-placeholder:hover {
-            border-color: rgba(255, 0, 0, 0.6);
-            background: rgba(255, 0, 0, 0.05);
-        }
+.video-placeholder:hover {
+  border-color: rgba(255, 0, 0, 0.6);
+  background: rgba(255, 0, 0, 0.05);
+}
 
-        .youtube-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+.youtube-grid {
+  /* Improved grid layout to prevent overlapping */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
 
-        .youtube-card {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            padding: 15px;
-            border: 1px solid rgba(77, 0, 128, 0.3);
-            transition: all 0.3s ease;
-            /* Added 3D card effects */
-            transform-style: preserve-3d;
-        }
+.youtube-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgba(77, 0, 128, 0.3);
+  transition: all 0.3s ease;
+  /* Added width constraint and overflow handling */
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
 
-        .youtube-card:hover {
-            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-            border-color: rgba(77, 0, 128, 0.5);
-            box-shadow: 0 15px 30px rgba(77, 0, 128, 0.3);
-        }
+.youtube-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  border-color: rgba(77, 0, 128, 0.5);
+  box-shadow: 0 15px 30px rgba(77, 0, 128, 0.3);
+}
 
-        .youtube-card iframe {
-            /* Added interactive iframe */
-            transition: all 0.3s ease;
-        }
+.youtube-card iframe {
+  /* Made card iframes fully responsive */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-        .youtube-card iframe:hover {
-            transform: scale(1.05);
-        }
+.youtube-card iframe:hover {
+  transform: scale(1.02);
+}
 
-        .video-thumbnail {
-            width: 100%;
-            height: 160px;
-            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+.video-thumbnail {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        .video-thumbnail:hover {
-            background: linear-gradient(45deg, #2d2d2d, #404040);
-        }
+.video-thumbnail:hover {
+  background: linear-gradient(45deg, #2d2d2d, #404040);
+}
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .spotify-cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+/*responsive design 8*/
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
+  .header h1 {
+    font-size: 2.5rem;
+  }
 
-            .nav-container {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
+  .nav-container {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 
-            .nav-link {
-                padding: 8px 15px;
-                font-size: 14px;
-            }
+  .nav-link {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 
-            .song-card {
-                min-width: 250px;
-            }
+  .song-card {
+    min-width: 250px;
+  }
 
-            .spotify-cards {
-                grid-template-columns: 1fr;
-            }
+  .spotify-cards {
+    grid-template-columns: 1fr;
+  }
 
-            .video-placeholder {
-                height: 250px;
-            }
+  .video-placeholder {
+    height: 250px;
+  }
 
-            .youtube-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+  .youtube-grid {
+    /* Improved mobile grid layout */
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Added mobile-specific YouTube styles */
+  .youtube-player {
+    margin-bottom: 30px;
+  }
+
+  .youtube-card {
+    padding: 12px;
+  }
+}
+
+/* Added extra small screen support */
+@media (max-width: 480px) {
+  .youtube-grid {
+    gap: 15px;
+  }
+
+  .youtube-card {
+    padding: 10px;
+  }
+}
     </style>
 </head>
 <body>
@@ -947,44 +982,63 @@
     <!-- Moved YouTube section up to replace Spotify players -->
     <section class="youtube-section" id="player">
         <h2>Music Videos</h2>
-     <div class="youtube-container">
-    <div class="youtube-player">
-        <iframe 
-            width="100%" 
-            height="400" 
-            src="https://www.youtube.com/embed/MEhZAA9rN6A" 
-            title="Justin Bieber - Ghost" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            style="border-radius: 15px;">
-        </iframe>
-    </div>
-    <div class="youtube-grid">
-        <div class="youtube-card">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HKMP2Woaf2E?si=440yb-TMUfxmNSPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="youtube-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/KIK3azN4w34?si=JWGyCCgPqSlGvPCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="youtube-card">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/33Uh-uNb5Oc?si=LLDXbiQokRtaOFat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="youtube-card">
+    <div class="youtube-container">
+        <div class="youtube-player">
             <iframe 
-                width="100%" 
-                height="160" 
-                src="https://www.youtube.com/embed/kTJczUoc26U" 
-                title="Justin Bieber - Stay" 
+                src="https://www.youtube.com/embed/Fp8msa5uYsc?si=ZbQXAfbaGrRuS_v3" 
+                title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="border-radius: 10px;">
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
             </iframe>
         </div>
+        
+        <div class="youtube-grid">
+            <div class="youtube-card">
+                <iframe 
+                    src="https://www.youtube.com/embed/HKMP2Woaf2E?si=440yb-TMUfxmNSPs" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="youtube-card">
+                <iframe 
+                    src="https://www.youtube.com/embed/KIK3azN4w34?si=JWGyCCgPqSlGvPCe" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="youtube-card">
+                <iframe 
+                    src="https://www.youtube.com/embed/33Uh-uNb5Oc?si=LLDXbiQokRtaOFat" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="youtube-card">
+                <iframe 
+                    src="https://www.youtube.com/embed/kTJczUoc26U" 
+                    title="Justin Bieber - Stay" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </div>
-</div>
-
     </section>
 
     <!-- Added songs carousel section -->
