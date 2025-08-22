@@ -76,6 +76,7 @@ export default function Hackathons() {
       date: "June 2025",
       location: "Singapore",
       teamSize: "5 members",
+      prize: "Sparks Community Innovation Fund",
       technologies: ["React", "Python", "OpenAI API", "Firebase"],
     },
     {

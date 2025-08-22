@@ -74,7 +74,7 @@ export default function About() {
       school: "Singapore Management University",
       period: "2024 - 2028",
       location: "Singapore",
-      description: "Year 1 Semester 2",
+      description: "Year 2 Semester 1",
     },
     {
       degree: "Diploma in Business Information Systems",

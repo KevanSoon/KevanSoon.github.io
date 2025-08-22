@@ -99,8 +99,8 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            I am an incoming Year 2 Software Engineering Undergraduate at Singapore Management University.
-            I love joining hackathons to build prototypes for fun!
+           I am a Year 2 Software Engineering Undergraduate at Singapore Management University. 
+           I love joining hackathons to build prototypes for fun!
           </p>
 
           {/* Social Links */}
