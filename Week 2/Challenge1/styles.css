@@ -1,0 +1,156 @@
+/* styles.css - Challenge #1 (Skeleton) */
+
+* {
+    background-color: #F5F5F5;
+    margin: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    
+}
+
+
+
+
+.about {
+     text-align: center;
+     line-height: 25px;
+}
+
+
+.park-name {
+    color: violet;
+    font-size: 40px;
+    margin: 0;
+}
+.site-header h1 {
+    color: violet;
+    font-size: 40px;
+    text-align: center;
+}
+
+.site-header p {
+    font-style: italic;
+    text-align: center;
+    color: #6B7280;
+}
+
+#mascot-image {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+            
+}
+
+.mascot-placeholder {
+    display: flex;
+    flex-direction: column; /*children stack up */
+    justify-content: center; /*vertically center */
+    align-items: center; /* horizontal center img */
+    text-align: center; /* horizontal center txt 8*/
+}
+
+.make-donation {
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 0px;
+    padding: 20px;
+    box-shadow: 0 0 20px magenta;
+    background-color: blue;
+    font-weight: bold;
+    transition: transform 0.2 ease, box-shadow 0.2s ease;
+
+}
+.actions {
+    display: flex;
+    flex-direction: row; /*children stack up */
+    justify-content: center; /*vertically center */
+    align-items: center; /* horizontal center img */
+    text-align: center; /* horizontal center txt 8*/
+}
+
+.buy-tickets {
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 0px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00f7ff;
+    background-color: green;
+    font-weight: bold;
+    transition: transform 0.2 ease, box-shadow 0.2 ease;
+
+}
+
+.buy-tickets:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.make-donation:hover {
+    background-color: darkblue;
+    cursor: pointer;
+    transform: translateY(-2px);
+  
+}
+
+.site-footer {
+    text-align: center;
+    
+}
+
+.site-footer p {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+
+@media (max-width: 1024px) {
+    .about {
+        text-align: unset;
+    }
+
+    .container {
+        max-width: 800px;
+        
+    }
+}
+
+@media (max-width: 450px) {
+    #mascot-image {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    }
+
+
+    .about {
+        text-align: unset;
+    }
+
+    .buy-tickets {
+        font-size:14px;
+        border-radius: 10px;
+        border: 0px;
+        padding: 13px;
+    }
+
+    .make-donation {
+        font-size: 14px;
+        border-radius: 10px;
+        border: 0px;
+        padding: 13px;
+    }
+
+    @media (max-width: 380px) {
+        .actions {
+            display: inline-block;
+        }
+    }
+
+}

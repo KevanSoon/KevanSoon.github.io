@@ -1,0 +1,365 @@
+/* styles.css - Challenge #3 (Skeleton: Park Map - Positioning) */
+
+
+/* 0) Base page (font, background, text color, remove default margins) */
+* {
+ 
+    margin: 3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: #F7F8FC ;
+
+}
+
+/* 1) Container (center, max-width, padding) */
+.container {
+   max-width: 920px;
+ 
+}
+
+/* 2) Map section heading (spacing, readability) */
+.site-header h1{
+   margin-top: 30px;
+}
+
+.site-header p{
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+
+
+/* 3) Map wrapper
+   - Make this the positioning context for absolute children (hint: relative).
+   - Ensure it doesn't overflow horizontally.
+*/
+.map-wrapper {
+   max-width: 790px;
+   position: relative;
+   border-radius: 20px;
+}
+
+
+/* 4) Map image
+   - Keep it responsive inside the container (full width of wrapper, auto height).
+*/
+.park-map {
+   width: 100%;
+   border-radius: 20px;
+   border: 1px solid lightgray;
+}
+
+
+/* 5) Markers
+   - Style as small circular buttons (size, color, border-radius).
+   - Absolutely position them using top/left percentages so they sit over the map.
+   - Center each marker over its coordinates (hint: translate).
+   - Ensure markers appear ABOVE the map (z-index).
+*/
+
+/* 6) Tooltips
+   - Hidden by default; visible on hover of the marker.
+   - Small label box above the marker (position absolute relative to marker).
+   - Add a subtle background, border, and rounded corners.
+   - Raise above map and marker with z-index.
+*/
+
+#marker-atlantis .tooltip {
+   visibility: hidden;
+   position: absolute;
+   align-items: center;
+   bottom: 100%;
+   left: -280%;
+   font-size: 10px;
+   width: 92px;
+   border: 1px black solid;
+   border-radius: 5px;
+   color: white;
+   background-color: black;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   
+   
+   
+}
+
+#marker-atlantis {
+   background-color: palevioletred;
+   border-radius: 50px;
+   border: 2px solid white;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   top: 29%;
+   left: 21%;
+
+   
+}
+
+#marker-atlantis:hover .tooltip {
+   visibility: visible;
+}
+
+
+#marker-gyro .tooltip {
+   visibility: hidden;
+   position: absolute;
+   align-items: center;
+   bottom: 100%;
+   left: -250%;
+   font-size: 10px;
+   width: 92px;
+   border: 1px black solid;
+   border-radius: 5px;
+   color: white;
+   background-color: black;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+
+#marker-gyro {
+   background-color: palevioletred;
+   border-radius: 50px;
+   border: 2px solid white;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   top: 16%;
+   left: 77%;
+
+}
+
+#marker-gyro:hover .tooltip {
+   visibility: visible;
+}
+
+#marker-carousel .tooltip {
+   visibility: hidden;
+   position: absolute;
+   align-items: center;
+   bottom: 100%;
+   left: -250%;
+   font-size: 10px;
+   width: 92px;
+   border: 1px black solid;
+   border-radius: 5px;
+   color: white;
+   background-color: black;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+#marker-carousel {
+   background-color: palevioletred;
+   border-radius: 50px;
+   border: 2px solid white;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   top: 59%;
+   left: 29%;
+
+}
+
+#marker-carousel:hover .tooltip {
+   visibility: visible;
+}
+
+
+#marker-river .tooltip {
+   visibility: hidden;
+   position: absolute;
+   align-items: center;
+   bottom: 100%;
+   left: -250%;
+   font-size: 10px;
+   width: 92px;
+   border: 1px black solid;
+   border-radius: 5px;
+   color: white;
+   background-color: black;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+#marker-river {
+   background-color: palevioletred;
+   border-radius: 50px;
+   border: 2px solid white;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   top: 66%;
+   left: 69%;
+
+}
+
+#marker-river:hover .tooltip {
+   visibility: visible;
+}
+
+
+/* 7) Legend box
+   - Position absolute INSIDE the map wrapper, bottom-right corner.
+   - Add background, padding, small rounded corners.
+   - Keep text legible and compact.
+*/
+.legend {
+   background-color: white;
+   border-radius: 10px;
+   position: absolute;
+   top: 73%;
+   padding: 5px;
+   left: 83%;
+   box-shadow: 0 0 2px gray;
+}
+
+.legend ul {
+   padding-left: 20px;
+   padding-bottom: 5px;
+   list-style: none;
+}
+
+.legend h3 {
+   padding-left: 4px;
+}
+
+.legend li:nth-child(1)::before {
+   content: "";
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: palevioletred;
+  border: 1px solid grey;
+  
+}
+
+.legend li::before {
+   content: "";
+  position: absolute;
+  left: 10%;
+  top: 65%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: skyblue;
+  border: 1px solid grey;
+  
+}
+
+
+/* 8) Fixed Back to Top button
+   - Position fixed at bottom-right of viewport.
+   - Visible at all times.
+   - Style as a small pill button.
+   - Keep above everything with z-index.
+*/
+.back-to-top {
+   background-color: blue;
+   color: white;
+   padding: 13px;
+   border-radius: 25px;
+   font-weight: bold;
+   font-size: 20px;
+   text-decoration: none;
+   position: fixed;   
+   top: 94%;
+   left: 80%;
+   width: 55px;
+   box-shadow: 0px 0px 4px black;
+
+}
+
+
+
+/* 9) Footer (muted, centered) */
+
+.site-footer {
+  position: relative;
+  padding-top: 50px;
+  padding-left: 340px;
+  color: #6B7280;
+}
+
+.site-footer p {
+   color: #6B7280;
+}
+
+.site-footer::before {
+margin-top: 20px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;               /* stick line to top of footer */
+  left: 0;
+  width: 90%;
+  height: 1px;          /* thickness of line */
+  background-color: #ccc; /* line color */
+}
+
+/* 10) Getting Here & Around section styling  */
+.transport h2 {
+   margin-top: 20px;
+}
+
+.transport-columns {
+   display: grid;
+    grid-template-columns: repeat(2, 390px);
+    gap: 20px;
+    width: 800px;
+}
+
+.transport-info  {
+   border-radius: 10px;
+   border: 1px solid lightgray;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: white;
+   color: white;
+}
+
+.transport-discounts {
+   border-radius: 10px;
+   border: 1px solid lightgray;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: white;
+   color: white;
+}
+
+.transport-discounts h3 {
+   background-color: white;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.transport-discounts p {
+   background-color: white;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.transport-discounts ul  {
+   background-color: white;
+}
+
+.transport-discounts ul  li{
+   background-color: white;
+}
+
+.transport-info h3 {
+   background-color: white;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.transport-info p{
+   background-color: white;
+}
