@@ -218,10 +218,17 @@
    padding-left: 20px;
    padding-bottom: 5px;
    list-style: none;
+   background-color: white;
+   
+}
+
+.legend li {
+   background-color: white;
 }
 
 .legend h3 {
    padding-left: 4px;
+   background-color: white;
 }
 
 .legend li:nth-child(1)::before {
@@ -234,6 +241,7 @@
   border-radius: 50%;
   background-color: palevioletred;
   border: 1px solid grey;
+
   
 }
 
