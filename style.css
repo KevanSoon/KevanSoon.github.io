@@ -1,0 +1,71 @@
+* {
+    background-color: black ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    
+}
+
+.profile-img {
+    text-align: center;
+
+}
+.profile-img img {
+    width: 500px;
+    height: 400px;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 30px skyblue;
+  
+}
+
+.profile-img img:hover {
+    background-color: skyblue;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.youtube-container {
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+.youtube-player {
+    text-align: center;
+    box-shadow: 0px 0px 30px skyblue;
+
+}
+
+.youtube-player:hover {
+    background-color: skyblue;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.mini-bio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.mini-bio h1 {
+    padding: 20px;
+}
+
+.mini-bio span {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 30px skyblue;
+
+
+}
